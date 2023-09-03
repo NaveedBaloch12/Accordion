@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+
+    <style>
+        body{
+            background-color: lightgrey;
+        }
+
+        h1{
+            text-align: center;
+        }
+        label{
+            cursor: pointer;
+            padding: 1rem;
+            background: white;
+            margin-inline: auto;
+            margin-block: 1rem 0rem;
+            display: flex;
+            justify-content: space-between;
+            max-width: 50rem;
+        }
+        .content{
+            border-top: 2px solid rgba(128, 128, 128, 0.406);
+            max-width: 50rem;
+            margin-inline: auto;
+            padding: 1rem;
+            background: white;
+        }
+
+        input[type= checkbox]{
+            display: none;
+        }
+        .content{
+            display: none;
+        }
+
+        #content__1:checked{
+            & + #content-1{
+                display: block;
+            }
+        }
+        #content__2:checked{
+            & + #content-2{
+                display: block;
+            }
+        }
+        #content__3:checked{
+            & + #content-3{
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Accordion</h1>
+
+        <label for="content__1">01. Mobiles </label>
+        <input type="checkbox" name="content__1" id="content__1">
+        <div class="content" id="content-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsam consequatur? Fugiat aliquam ad magni exercitationem iusto, quibusdam libero modi mollitia, officiis qui atque odio, officia velit adipisci facere voluptates nisi! Nobis molestiae tenetur aspernatur. Quos et ex sapiente vel velit? Quis dolorem sed esse. Maiores ratione assumenda perferendis architecto?
+        </div>
+        <label for="content__2">02. Laptops </label>
+        <input type="checkbox" name="content__2" id="content__2">
+        <div class="content" id="content-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsam consequatur? Fugiat aliquam ad magni exercitationem iusto, quibusdam libero modi mollitia, officiis qui atque odio, officia velit adipisci facere voluptates nisi! Nobis molestiae tenetur aspernatur. Quos et ex sapiente vel velit? Quis dolorem sed esse. Maiores ratione assumenda perferendis architecto?
+        </div>
+        <label for="content__3">03. Computers </label>
+        <input type="checkbox" name="content__3" id="content__3">
+        <div class="content" id="content-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsam consequatur? Fugiat aliquam ad magni exercitationem iusto, quibusdam libero modi mollitia, officiis qui atque odio, officia velit adipisci facere voluptates nisi! Nobis molestiae tenetur aspernatur. Quos et ex sapiente vel velit? Quis dolorem sed esse. Maiores ratione assumenda perferendis architecto?
+        </div>
+    </div>
+</body>
+</html>
